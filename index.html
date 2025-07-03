@@ -1,0 +1,413 @@
+
+ 
+<html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkcoder</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="/images/logo.png">
+    <meta property="og:image:url" content="/images/logo.png">
+    <meta property="og:image:secure_url" content="/images/logo.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="tornex">
+    <meta property="og:image:width" content="781">
+    <meta property="og:image:height" content="439">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="tornex">
+ <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="tornex">
+    <meta name="twitter:creator" content="tornex">
+    <meta name="twitter:title" content="tornex">
+<meta name="twitter:image" content="/images/logo.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="dark coder">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" href="./dark/R.jpn.png" type="image/x-icon">
+    <link rel="icon" href="./dark/R.jpn.png">
+    <meta name="description" content="tornex">
+    <meta name="keywords" content="tornex">
+    <meta name="title" content="tornex">
+    <meta name="googlebot" content="index,follow">
+    <meta name="robots" content="all">
+    <meta name="robots schedule" content="auto">
+    <meta name="distribution" content="global">
+    <title>darkcoder</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,700,700i" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./darkbaground.jpn.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./darkbaground.jpn.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href=".darkbaground.jpn.jpg">
+    <meta name="apple-mobile-web-app-title" content="tornex">
+    <meta name="application-name" content="dark coder">
+    <style>
+    body {
+      user-select: none;
+    }
+    * {
+    cursor: url(https://ani.cursors-4u.net/smiley/smi-3/smi292.cur), auto !important;
+}
+  </style>
+  <script>
+    window.addEventListener('keydown', function(event) {
+      event.preventDefault();
+    });
+     
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+    });
+  </script>
+    <style>
+       
+         
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+ 
+        ::-webkit-scrollbar-track {
+            background: rgba(170, 255, 252, 0.1);
+            border-radius: 5px;
+        }
+ 
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, rgba(170, 255, 252, 0.3), rgba(170, 255, 252, 0.5));
+            border-radius: 5px;
+            border: 2px solid rgba(170, 255, 252, 0.1);
+        }
+ 
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, rgba(170, 255, 252, 0.5), rgba(170, 255, 252, 0.7));
+        }
+         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'ahmedbeehy';
+        }
+ 
+        body {
+            background: url(./background.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+ 
+        @keyframes gradientBG {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+ 
+        .intro {
+            position: fixed;
+            inset: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+ 
+        .intro.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+ 
+        .profile-container {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(170, 255, 252, 0.1);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+ 
+        .profile-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0%,
+                rgba(170, 255, 252, 0.1) 25%,
+                transparent 50%
+            );
+            animation: borderRotate 4s linear infinite;
+            z-index: -1;
+        }
+ 
+        @keyframes borderRotate {
+            100% { transform: rotate(360deg) }
+        }
+ 
+        .profile-container.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+ 
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+ 
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #aafffc;
+            box-shadow: 0 0 20px rgba(170, 255, 252, 0.5);
+            transition: transform 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+            margin: 0 auto;
+        }
+ 
+        @keyframes float {
+            0%, 100% { transform: translateY(0) }
+            50% { transform: translateY(-10px) }
+        }
+ 
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+ 
+        h1 {
+            margin: 1.5rem 0;
+            font-size: 2.3rem;
+            text-shadow: 0 0 10px rgba(170, 255, 252, 0.5);
+        }
+ 
+        .intro-text {
+            color: #aafffc;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 80%;
+            padding: 3px
+            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(170, 255, 252, 0.1), rgba(170, 255, 252, 0.05));
+            backdrop-filter: blur(5px);
+            transform: translateZ(0);
+            animation: pulse 2s infinite;
+        }
+ 
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(170, 255, 252, 0.4) }
+            70% { box-shadow: 0 0 0 10px rgba(170, 255, 252, 0) }
+            100% { box-shadow: 0 0 0 0 rgba(170, 255, 252, 0) }
+        }
+ 
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+ 
+        .social-link-container {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+ 
+        .social-link-container:hover {
+            transform: translateX(-5px);
+        }
+ 
+        .social-links a {
+            background: linear-gradient(45deg, rgba(170, 255, 252, 0.1), rgba(170, 255, 252, 0.2));
+            border: 1px solid rgba(170, 255, 252, 0.3);
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(170, 255, 252, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+ 
+        .social-links a:hover::before {
+            left: 100%;
+        }
+ 
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+ 
+        .social-links a:hover img {
+            transform: rotate(360deg);
+        }
+ 
+        .button-description {
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%) translateX(100%);
+            background: rgba(170, 255, 252, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #fff;
+            opacity: 0;
+            transition: all 0.3s ease;
+            width: auto;
+            white-space: nowrap;
+            pointer-events: none;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(170, 255, 252, 0.2);
+        }
+ 
+        .social-link-container:hover .button-description {
+            opacity: 1;
+            transform: translateY(-50%) translateX(10px);
+        }
+ 
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 1.5rem;
+            }
+ 
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+ 
+            h1 {
+                font-size: 1.5rem;
+            }
+ 
+            .intro-text {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+ 
+            .button-description {
+                position: static;
+                transform: none;
+                margin-top: 0.5rem;
+                opacity: 1;
+                white-space: normal;
+                text-align: center;
+            }
+ 
+            .social-link-container:hover .button-description {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="profile-container visible" id="profile" style="display: block;">
+        <div class="profile-header">
+            <img src="./R.jpn.png" alt="" class="profile-pic">
+            <h1>TorNex</h1>
+            <div class="intro-text">
+                my all social_media
+            </div>
+        </div>
+                <div class="social-links">
+                    <div class="social-link-container">
+                <a href="https://www.tiktok.com/@tornex.krd" target="_blank">
+                    <img src="./tiktok.png" alt="tiktok">
+                    tiktok
+                </a>
+            </div>
+
+            <div class="social-link-container">
+                <a href="https://t.me/TorNex_krd" target="_blank">
+                    <img src="./telegram.png" alt="telegram">
+                     telegram
+                </a>
+
+            </div>
+
+            <div class="social-link-container">
+                <a href="./netstore.html" target="_blank">
+                    <img src="./store-16.png" alt="discord">
+                    my store
+                </a>
+
+            </div>
+
+            <div class="social-link-container">
+                <a href="https://t.me/TorNex_bot" target="_blank">
+                    <img src="./bot_telegram.jpn.png" alt="bot_telegram">
+                     bot_telegram
+                </a>
+
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        function startSite() {
+            const intro = document.getElementById('intro');
+            const profile = document.getElementById('profile');
+            const bgMusic = document.getElementById('bgMusic');
+             
+            intro.classList.add('hidden');
+            profile.style.display = 'block';
+             
+            setTimeout(() => {
+                profile.classList.add('visible');
+            }, 100);
+ 
+            setTimeout(() => {
+                intro.style.display = 'none';
+            }, 1000);
+ 
+            bgMusic.play().catch(error => {
+                console.log('Auto-play was prevented');
+            });
+        }
+    </script>
+ 
+</body></html>
